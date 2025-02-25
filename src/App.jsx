@@ -8,7 +8,9 @@ function App() {
   const [names, setNames] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("http://localhost:3000/");
+      const response = await fetch(
+        "https://test-deploy-back-ynkz.onrender.com/"
+      );
       const res = await response.json();
       setNames(res);
     };

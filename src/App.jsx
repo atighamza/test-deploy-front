@@ -8,9 +8,7 @@ function App() {
   const [names, setNames] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(
-        "https://test-deploy-back-ynkz.onrender.com/"
-      );
+      const response = await fetch(import.meta.env.VITE_API_URL);
       const res = await response.json();
       setNames(res);
     };
